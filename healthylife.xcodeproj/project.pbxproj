@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29CA05C019A33AE0002F9C00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29CA05BF19A33AE0002F9C00 /* Foundation.framework */; };
+		29CA05C219A33AE0002F9C00 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29CA05C119A33AE0002F9C00 /* CoreGraphics.framework */; };
+		29CA05C419A33AE0002F9C00 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29CA05C319A33AE0002F9C00 /* UIKit.framework */; };
+		29CA05CA19A33AE0002F9C00 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29CA05C819A33AE0002F9C00 /* InfoPlist.strings */; };
+		29CA05CC19A33AE0002F9C00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CA05CB19A33AE0002F9C00 /* main.m */; };
+		29CA05D019A33AE0002F9C00 /* comAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CA05CF19A33AE0002F9C00 /* comAppDelegate.m */; };
+		29CA05D319A33AE0002F9C00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29CA05D119A33AE0002F9C00 /* Main.storyboard */; };
+		29CA05D619A33AE0002F9C00 /* comViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CA05D519A33AE0002F9C00 /* comViewController.m */; };
+		29CA05D819A33AE0002F9C00 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29CA05D719A33AE0002F9C00 /* Images.xcassets */; };
+		29CA05DF19A33AE1002F9C00 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29CA05DE19A33AE1002F9C00 /* XCTest.framework */; };
+		29CA05E019A33AE1002F9C00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29CA05BF19A33AE0002F9C00 /* Foundation.framework */; };
+		29CA05E119A33AE1002F9C00 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29CA05C319A33AE0002F9C00 /* UIKit.framework */; };
+		29CA05E919A33AE1002F9C00 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29CA05E719A33AE1002F9C00 /* InfoPlist.strings */; };
+		29CA05EB19A33AE1002F9C00 /* healthylifeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CA05EA19A33AE1002F9C00 /* healthylifeTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		29CA05E219A33AE1002F9C00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29CA05B419A33AE0002F9C00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29CA05BB19A33AE0002F9C00;
+			remoteInfo = healthylife;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		29CA05BC19A33AE0002F9C00 /* healthylife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = healthylife.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		29CA05BF19A33AE0002F9C00 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		29CA05C119A33AE0002F9C00 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		29CA05C319A33AE0002F9C00 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		29CA05C719A33AE0002F9C00 /* healthylife-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "healthylife-Info.plist"; sourceTree = "<group>"; };
+		29CA05C919A33AE0002F9C00 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		29CA05CB19A33AE0002F9C00 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29CA05CD19A33AE0002F9C00 /* healthylife-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "healthylife-Prefix.pch"; sourceTree = "<group>"; };
+		29CA05CE19A33AE0002F9C00 /* comAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = comAppDelegate.h; sourceTree = "<group>"; };
+		29CA05CF19A33AE0002F9C00 /* comAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = comAppDelegate.m; sourceTree = "<group>"; };
+		29CA05D219A33AE0002F9C00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		29CA05D419A33AE0002F9C00 /* comViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = comViewController.h; sourceTree = "<group>"; };
+		29CA05D519A33AE0002F9C00 /* comViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = comViewController.m; sourceTree = "<group>"; };
+		29CA05D719A33AE0002F9C00 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		29CA05DD19A33AE1002F9C00 /* healthylifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = healthylifeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		29CA05DE19A33AE1002F9C00 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		29CA05E619A33AE1002F9C00 /* healthylifeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "healthylifeTests-Info.plist"; sourceTree = "<group>"; };
+		29CA05E819A33AE1002F9C00 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		29CA05EA19A33AE1002F9C00 /* healthylifeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = healthylifeTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29CA05B919A33AE0002F9C00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29CA05C219A33AE0002F9C00 /* CoreGraphics.framework in Frameworks */,
+				29CA05C419A33AE0002F9C00 /* UIKit.framework in Frameworks */,
+				29CA05C019A33AE0002F9C00 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29CA05DA19A33AE1002F9C00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29CA05DF19A33AE1002F9C00 /* XCTest.framework in Frameworks */,
+				29CA05E119A33AE1002F9C00 /* UIKit.framework in Frameworks */,
+				29CA05E019A33AE1002F9C00 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		29CA05B319A33AE0002F9C00 = {
+			isa = PBXGroup;
+			children = (
+				29CA05C519A33AE0002F9C00 /* healthylife */,
+				29CA05E419A33AE1002F9C00 /* healthylifeTests */,
+				29CA05BE19A33AE0002F9C00 /* Frameworks */,
+				29CA05BD19A33AE0002F9C00 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		29CA05BD19A33AE0002F9C00 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29CA05BC19A33AE0002F9C00 /* healthylife.app */,
+				29CA05DD19A33AE1002F9C00 /* healthylifeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29CA05BE19A33AE0002F9C00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29CA05BF19A33AE0002F9C00 /* Foundation.framework */,
+				29CA05C119A33AE0002F9C00 /* CoreGraphics.framework */,
+				29CA05C319A33AE0002F9C00 /* UIKit.framework */,
+				29CA05DE19A33AE1002F9C00 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		29CA05C519A33AE0002F9C00 /* healthylife */ = {
+			isa = PBXGroup;
+			children = (
+				29CA05CE19A33AE0002F9C00 /* comAppDelegate.h */,
+				29CA05CF19A33AE0002F9C00 /* comAppDelegate.m */,
+				29CA05D119A33AE0002F9C00 /* Main.storyboard */,
+				29CA05D419A33AE0002F9C00 /* comViewController.h */,
+				29CA05D519A33AE0002F9C00 /* comViewController.m */,
+				29CA05D719A33AE0002F9C00 /* Images.xcassets */,
+				29CA05C619A33AE0002F9C00 /* Supporting Files */,
+			);
+			path = healthylife;
+			sourceTree = "<group>";
+		};
+		29CA05C619A33AE0002F9C00 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				29CA05C719A33AE0002F9C00 /* healthylife-Info.plist */,
+				29CA05C819A33AE0002F9C00 /* InfoPlist.strings */,
+				29CA05CB19A33AE0002F9C00 /* main.m */,
+				29CA05CD19A33AE0002F9C00 /* healthylife-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		29CA05E419A33AE1002F9C00 /* healthylifeTests */ = {
+			isa = PBXGroup;
+			children = (
+				29CA05EA19A33AE1002F9C00 /* healthylifeTests.m */,
+				29CA05E519A33AE1002F9C00 /* Supporting Files */,
+			);
+			path = healthylifeTests;
+			sourceTree = "<group>";
+		};
+		29CA05E519A33AE1002F9C00 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				29CA05E619A33AE1002F9C00 /* healthylifeTests-Info.plist */,
+				29CA05E719A33AE1002F9C00 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		29CA05BB19A33AE0002F9C00 /* healthylife */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29CA05EE19A33AE1002F9C00 /* Build configuration list for PBXNativeTarget "healthylife" */;
+			buildPhases = (
+				29CA05B819A33AE0002F9C00 /* Sources */,
+				29CA05B919A33AE0002F9C00 /* Frameworks */,
+				29CA05BA19A33AE0002F9C00 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = healthylife;
+			productName = healthylife;
+			productReference = 29CA05BC19A33AE0002F9C00 /* healthylife.app */;
+			productType = "com.apple.product-type.application";
+		};
+		29CA05DC19A33AE1002F9C00 /* healthylifeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29CA05F119A33AE1002F9C00 /* Build configuration list for PBXNativeTarget "healthylifeTests" */;
+			buildPhases = (
+				29CA05D919A33AE1002F9C00 /* Sources */,
+				29CA05DA19A33AE1002F9C00 /* Frameworks */,
+				29CA05DB19A33AE1002F9C00 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				29CA05E319A33AE1002F9C00 /* PBXTargetDependency */,
+			);
+			name = healthylifeTests;
+			productName = healthylifeTests;
+			productReference = 29CA05DD19A33AE1002F9C00 /* healthylifeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29CA05B419A33AE0002F9C00 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = com;
+				LastUpgradeCheck = 0510;
+				TargetAttributes = {
+					29CA05DC19A33AE1002F9C00 = {
+						TestTargetID = 29CA05BB19A33AE0002F9C00;
+					};
+				};
+			};
+			buildConfigurationList = 29CA05B719A33AE0002F9C00 /* Build configuration list for PBXProject "healthylife" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 29CA05B319A33AE0002F9C00;
+			productRefGroup = 29CA05BD19A33AE0002F9C00 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				29CA05BB19A33AE0002F9C00 /* healthylife */,
+				29CA05DC19A33AE1002F9C00 /* healthylifeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		29CA05BA19A33AE0002F9C00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29CA05D819A33AE0002F9C00 /* Images.xcassets in Resources */,
+				29CA05CA19A33AE0002F9C00 /* InfoPlist.strings in Resources */,
+				29CA05D319A33AE0002F9C00 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29CA05DB19A33AE1002F9C00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29CA05E919A33AE1002F9C00 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29CA05B819A33AE0002F9C00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29CA05D619A33AE0002F9C00 /* comViewController.m in Sources */,
+				29CA05D019A33AE0002F9C00 /* comAppDelegate.m in Sources */,
+				29CA05CC19A33AE0002F9C00 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29CA05D919A33AE1002F9C00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29CA05EB19A33AE1002F9C00 /* healthylifeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		29CA05E319A33AE1002F9C00 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29CA05BB19A33AE0002F9C00 /* healthylife */;
+			targetProxy = 29CA05E219A33AE1002F9C00 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		29CA05C819A33AE0002F9C00 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29CA05C919A33AE0002F9C00 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29CA05D119A33AE0002F9C00 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29CA05D219A33AE0002F9C00 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		29CA05E719A33AE1002F9C00 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29CA05E819A33AE1002F9C00 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		29CA05EC19A33AE1002F9C00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		29CA05ED19A33AE1002F9C00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		29CA05EF19A33AE1002F9C00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "healthylife/healthylife-Prefix.pch";
+				INFOPLIST_FILE = "healthylife/healthylife-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		29CA05F019A33AE1002F9C00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "healthylife/healthylife-Prefix.pch";
+				INFOPLIST_FILE = "healthylife/healthylife-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		29CA05F219A33AE1002F9C00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/healthylife.app/healthylife";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "healthylife/healthylife-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "healthylifeTests/healthylifeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		29CA05F319A33AE1002F9C00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/healthylife.app/healthylife";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "healthylife/healthylife-Prefix.pch";
+				INFOPLIST_FILE = "healthylifeTests/healthylifeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		29CA05B719A33AE0002F9C00 /* Build configuration list for PBXProject "healthylife" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29CA05EC19A33AE1002F9C00 /* Debug */,
+				29CA05ED19A33AE1002F9C00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29CA05EE19A33AE1002F9C00 /* Build configuration list for PBXNativeTarget "healthylife" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29CA05EF19A33AE1002F9C00 /* Debug */,
+				29CA05F019A33AE1002F9C00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		29CA05F119A33AE1002F9C00 /* Build configuration list for PBXNativeTarget "healthylifeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29CA05F219A33AE1002F9C00 /* Debug */,
+				29CA05F319A33AE1002F9C00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29CA05B419A33AE0002F9C00 /* Project object */;
+}
