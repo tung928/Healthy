@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EatViewController.h"
 
-@interface comViewController : UIViewController
+@interface comViewController : UIViewController{
+    EatViewController *eatViewController;
+}
+
+- (IBAction)gotoEatView:(id)sender;
 
 @end

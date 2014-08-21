@@ -7,12 +7,20 @@
 //
 
 #import "comAppDelegate.h"
+#import "comViewController.h"
 
 @implementation comAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:[[comViewController alloc] init]];
+    [navVC setTitle:@"Home"];
+    [navVC setToolbarHidden:YES animated:YES];
+    self.window.rootViewController = navVC;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 							
