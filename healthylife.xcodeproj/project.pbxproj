@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2982AD8619A717BF0045E419 /* EatDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2982AD8419A717BF0045E419 /* EatDetailViewController.m */; };
+		2982AD8719A717BF0045E419 /* EatDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2982AD8519A717BF0045E419 /* EatDetailViewController.xib */; };
 		29B5810D19A4A164004DEF45 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B580FB19A4A164004DEF45 /* AFHTTPRequestOperation.m */; };
 		29B5810E19A4A164004DEF45 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B580FD19A4A164004DEF45 /* AFHTTPRequestOperationManager.m */; };
 		29B5810F19A4A164004DEF45 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B580FF19A4A164004DEF45 /* AFHTTPSessionManager.m */; };
@@ -50,6 +52,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2982AD8319A717BF0045E419 /* EatDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EatDetailViewController.h; sourceTree = "<group>"; };
+		2982AD8419A717BF0045E419 /* EatDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EatDetailViewController.m; sourceTree = "<group>"; };
+		2982AD8519A717BF0045E419 /* EatDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EatDetailViewController.xib; sourceTree = "<group>"; };
 		29B580FA19A4A164004DEF45 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		29B580FB19A4A164004DEF45 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		29B580FC19A4A164004DEF45 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -201,6 +206,7 @@
 		29CA05C519A33AE0002F9C00 /* healthylife */ = {
 			isa = PBXGroup;
 			children = (
+				29CA05C619A33AE0002F9C00 /* Supporting Files */,
 				29B5811619A59797004DEF45 /* Resource */,
 				29B580F919A4A164004DEF45 /* AFNetworking */,
 				29CA05CE19A33AE0002F9C00 /* comAppDelegate.h */,
@@ -210,10 +216,12 @@
 				29CA05D519A33AE0002F9C00 /* comViewController.m */,
 				29CA05F619A340C1002F9C00 /* comViewController.xib */,
 				29CA05D719A33AE0002F9C00 /* Images.xcassets */,
-				29CA05C619A33AE0002F9C00 /* Supporting Files */,
 				29CA05F819A48A5A002F9C00 /* EatViewController.h */,
 				29CA05F919A48A5A002F9C00 /* EatViewController.m */,
 				29CA05FA19A48A5A002F9C00 /* EatViewController.xib */,
+				2982AD8319A717BF0045E419 /* EatDetailViewController.h */,
+				2982AD8419A717BF0045E419 /* EatDetailViewController.m */,
+				2982AD8519A717BF0045E419 /* EatDetailViewController.xib */,
 			);
 			path = healthylife;
 			sourceTree = "<group>";
@@ -323,6 +331,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2982AD8719A717BF0045E419 /* EatDetailViewController.xib in Resources */,
 				29B5811D19A597AC004DEF45 /* eat.gif in Resources */,
 				29CA05F719A340C1002F9C00 /* comViewController.xib in Resources */,
 				29CA05D819A33AE0002F9C00 /* Images.xcassets in Resources */,
@@ -350,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2982AD8619A717BF0045E419 /* EatDetailViewController.m in Sources */,
 				29CA05D619A33AE0002F9C00 /* comViewController.m in Sources */,
 				29B5811119A4A164004DEF45 /* AFSecurityPolicy.m in Sources */,
 				29CA05D019A33AE0002F9C00 /* comAppDelegate.m in Sources */,

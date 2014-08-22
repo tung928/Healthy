@@ -9,6 +9,7 @@
 #import "EatViewController.h"
 #import "AFHTTPRequestOperation.h"
 #import "AFNetworking.h"
+#import "EatDetailViewController.h"
 
 @interface EatViewController ()
 
@@ -78,6 +79,11 @@
 #pragma UITableViewController Delegate
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    EatDetailViewController *eatDetailViewController = [[EatDetailViewController alloc] init];
+    NSMutableDictionary *eatDict = [eatListArr objectAtIndex:indexPath.row];
+    eatDetailViewController.url = [eatDict objectForKey:@"url"];
+                                   
+    [self.navigationController pushViewController:eatDetailViewController animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
