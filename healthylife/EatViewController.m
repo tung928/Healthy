@@ -8,7 +8,8 @@
 
 #import "EatViewController.h"
 #import "AFHTTPRequestOperation.h"
-#import "AFNetworking.h"
+#import "UIActivityIndicatorView+AFNetworking.h"
+#import "AFNetworkActivityIndicatorManager.h"
 #import "EatDetailViewController.h"
 
 @interface EatViewController ()
@@ -16,7 +17,7 @@
 @end
 
 @implementation EatViewController
-@synthesize eatListTableView,eatListArr;
+@synthesize eatListTableView,eatListArr,eatViewIndicator;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -33,7 +34,9 @@
 
     [super viewDidLoad];
     eatListArr = [[NSMutableArray alloc] init];
+    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     [self getJSon];
+    [eatViewIndicator startAnimating];
     //[self.navigationController setNavigationBarHidden:NO animated:YES];
     //[self.navigationController setTitle:@"Eat"];
     // Do any additional setup after loading the view from its nib.
@@ -41,6 +44,7 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [self setTitle:@"食得健康"];
 
 }
 
@@ -52,28 +56,36 @@
 
 - (void)getJSon{
     NSLog(@"Get JSon");
+    
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.leadingtech.org/healthylife/eat.json"]];
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc]
                                          initWithRequest:request];
+    //[eatViewIndicator startAnimating];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation
                                                , id responseObject) {
         NSLog(@"JSON: %@", responseObject);
-        
         if ([responseObject isKindOfClass:[NSDictionary class]]){
             NSLog(@"Eat List Dictionary Detected");
             eatListDict = [[NSMutableDictionary alloc] initWithDictionary:responseObject];
             eatListArr =[eatListDict valueForKey:@"eat_list"];
             NSLog(@"Eat List Array Size: %i", [eatListArr count]);
+            [eatViewIndicator stopAnimating];
+            eatViewIndicator.hidden = YES;
             [eatListTableView reloadData];
+            
         }else {
             //NSLog(@"Eat List Array Detected");
         }
+        //[eatViewIndicator stopAnimating];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         // Handle error
+        //[eatViewIndicator stopAnimating];
+        [operation cancel];
     }];
     
     [operation start];
+    
 }
 
 #pragma UITableViewController Delegate
@@ -82,6 +94,7 @@
     EatDetailViewController *eatDetailViewController = [[EatDetailViewController alloc] init];
     NSMutableDictionary *eatDict = [eatListArr objectAtIndex:indexPath.row];
     eatDetailViewController.url = [eatDict objectForKey:@"url"];
+    eatDetailViewController.title = [eatDict objectForKey:@"title"];
                                    
     [self.navigationController pushViewController:eatDetailViewController animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -97,8 +110,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    
-    NSLog(@"Load Table Cell");
     static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -112,8 +123,5 @@
     cell.imageView.image = [UIImage imageNamed:@"eat.gif"];
     return cell;
 }
-
-
-
 
 @end

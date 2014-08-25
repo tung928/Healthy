@@ -16,6 +16,8 @@
 
 @synthesize eatDetailWebView;
 @synthesize url;
+@synthesize title;
+@synthesize eatDetailActivityIndictor;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,11 +32,8 @@
 {
     [super viewDidLoad];
     
-    NSLog(@"URL: %@", url);
-    
-    eatDetailActivityIndictor = [[UIActivityIndicatorView alloc] init];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL: [NSURL URLWithString: url] cachePolicy: NSURLRequestUseProtocolCachePolicy timeoutInterval: 10];
-    
+    [self setTitle:title];
     [self.eatDetailWebView loadRequest: request];
     // Do any additional setup after loading the view from its nib.
 }
@@ -46,11 +45,20 @@
 }
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView{
-    [eatDetailActivityIndictor startAnimating];
+    NSLog(@"Stop Loading");
+    [eatDetailActivityIndictor stopAnimating];
+    eatDetailActivityIndictor.hidden = YES;
+    //[eatDetailActivityIndictor removeFromSuperview];
 }
 
 -(void)webViewDidStartLoad:(UIWebView *)webView{
+    NSLog(@"Start Loading");
+    [eatDetailActivityIndictor startAnimating];
+}
+
+-(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
     [eatDetailActivityIndictor stopAnimating];
+    eatDetailActivityIndictor.hidden = YES;
 }
 
 @end

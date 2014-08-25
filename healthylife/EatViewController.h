@@ -12,6 +12,7 @@
     
     NSMutableDictionary *eatListDict;
 }
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *eatViewIndicator;
 @property (weak, nonatomic) IBOutlet UITableView *eatListTableView;
 @property (strong, nonatomic) NSMutableArray *eatListArr;
 

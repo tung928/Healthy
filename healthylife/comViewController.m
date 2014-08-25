@@ -25,6 +25,7 @@
 
 -(void) viewWillAppear:(BOOL)animated{
     [self.navigationController setNavigationBarHidden:YES animated:YES];
+    [self setTitle:@"主頁"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,11 +35,7 @@
 }
 
 - (IBAction)gotoEatView:(id)sender {
-    NSLog(@"Eat View Button Clicked");
     eatViewController = [[EatViewController alloc]init];
-//    UINavigationController *navigationController =
-//    [[UINavigationController alloc] initWithRootViewController:eatViewController];
-//    navigationController.title = @"Eat View";
     [self.navigationController pushViewController:eatViewController animated:YES];
 }
 @end
