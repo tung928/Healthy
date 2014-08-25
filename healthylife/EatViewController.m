@@ -11,6 +11,7 @@
 #import "UIActivityIndicatorView+AFNetworking.h"
 #import "AFNetworkActivityIndicatorManager.h"
 #import "EatDetailViewController.h"
+#import "EatTableViewCell.h"
 
 @interface EatViewController ()
 
@@ -103,25 +104,33 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
 #ifdef DEBUG
-    NSLog(@"%i", [eatListArr count]);
+    NSLog(@"%lu", (unsigned long)[eatListArr count]);
 #endif
     return [eatListArr count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *eatDetailCell = @"EatDetailCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
+    //static BOOL isRegNib = NO;
+    //if (!isRegNib) {
+        [tableView registerNib:[UINib nibWithNibName:@"EatTableViewCell" bundle:nil] forCellReuseIdentifier:eatDetailCell];
+        //isRegNib = YES;
+    //}
+    
+    EatTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:eatDetailCell];
     
     NSMutableDictionary *eatDict = [eatListArr objectAtIndex:indexPath.row];
     // Configure the cell...
-    cell.textLabel.text = [eatDict valueForKey:@"title"];
-    cell.imageView.image = [UIImage imageNamed:@"eat.gif"];
+    cell.titleLbl.text = [eatDict valueForKey:@"title"];
+    cell.thumbImg.image = [UIImage imageNamed:@"eat.gif"];
+    cell.sourceLbl.text = [eatDict valueForKey:@"source"];
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 80.0f;
 }
 
 @end
