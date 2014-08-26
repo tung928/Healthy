@@ -36,6 +36,8 @@
 
 - (IBAction)gotoEatView:(id)sender {
     eatViewController = [[EatViewController alloc]init];
+    //NSLog(@"Sender: %d", [sender tag]);
+    eatViewController.typeNo = [NSString stringWithFormat:@"%i",[sender tag]];
     [self.navigationController pushViewController:eatViewController animated:YES];
 }
 @end

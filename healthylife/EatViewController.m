@@ -18,7 +18,7 @@
 @end
 
 @implementation EatViewController
-@synthesize eatListTableView,eatListArr,eatViewIndicator;
+@synthesize eatListTableView,eatListArr,eatViewIndicator,typeNo;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -34,6 +34,7 @@
 {
 
     [super viewDidLoad];
+    NSLog(@"Type: %d", typeNo);
     eatListArr = [[NSMutableArray alloc] init];
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     [self getJSon];
@@ -57,8 +58,28 @@
 
 - (void)getJSon{
     NSLog(@"Get JSon");
-    
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.leadingtech.org/healthylife/eat.json"]];
+    NSString *requestStr;
+    switch ([typeNo intValue]) {
+        case 0:
+            //live
+            requestStr = @"http://www.leadingtech.org/healthylife/life.json";
+            break;
+        case 1:
+            //eat
+            requestStr = @"http://www.leadingtech.org/healthylife/eat.json";
+            break;
+        case 2:
+            //eat
+            requestStr = @"http://www.leadingtech.org/healthylife/buy.json";
+            break;
+        case 3:
+            //travel
+            requestStr = @"http://www.leadingtech.org/healthylife/travel.json";
+            break;
+        default:
+            break;
+    }
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:requestStr]];
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc]
                                          initWithRequest:request];
     //[eatViewIndicator startAnimating];
@@ -82,7 +103,7 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         // Handle error
         //[eatViewIndicator stopAnimating];
-        [operation cancel];
+        //[operation cancel];
     }];
     
     [operation start];
